@@ -1,0 +1,294 @@
+/* Colors:
+/* Dark Teal: #69C4CC */
+/* Light Teal: #CFEFEE */
+h1, h2, h3, h4,h5, h6 {margin: 0}
+body { background-color: #69C4CC; }
+header { background-color: #CFEFEE; }
+nav#main { background-color: #F3CECD; }
+section { background-color: #FFFFFF;}
+
+/*Basic Global Styles*/
+nav ul {
+	list-style-type: none;
+	color: #FFFFFF;
+}
+nav ul li {
+	display: inline-block;
+}
+
+/*Grid Layout*/
+header {
+padding-top: 1em;
+text-align: right;
+}
+header nav#authentication {
+	float: right;
+}
+header h1 {
+	float: left;
+}
+
+body > section , header > section , nav#authentication, footer {
+	margin: 0 5em;
+	clear: right;
+}
+
+@media screen and (max-width: 700px){
+  body > section, header > section, nav#authentication, footer {
+    margin: 0 2em;
+  }
+}
+
+nav#main, footer {
+	text-align: center;
+}
+nav#main {
+	padding: 0.5em;
+}
+
+nav#main ul {
+  margin: 0;
+}
+
+body > section {
+	padding: 1em;
+}
+section {
+	clear: both;
+}
+
+section:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.left_column, .right_column {
+	width: 50%;
+	float: left;
+}
+
+section img#tree {
+        float: right;
+	margin-bottom: 2.5em;
+}
+
+ul#children {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul#children *{
+	max-width: 100%;
+	float:right;
+}
+
+ul#social {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul#social li {
+	display: inline-block;
+	width: 20%;
+	margin-right: 5%;
+}
+
+ul#social img {
+	max-width: 100%;
+}
+
+ul#social li:nth-child(4n) {
+	margin-right: 0;
+}
+
+@media screen and (max-width: 700px) {
+	ul#social li {
+		width: 47.5%;
+		margin: 0;
+		float: left;
+	}
+
+	ul#social li:nth-child(odd) {
+		clear: left;
+		margin-left: 5%;
+	}
+}
+/* Hiding baby pics on a small screen*/
+@media only screen and (max-width: 900px) {
+ul#children {
+visibility: hidden;
+  }
+}
+
+nav ul li a {
+	text-decoration: none;
+}
+
+header > section a {
+	padding: 0 2em;
+	border-radius: 10px;
+	display: flex;
+	margin-right: 2em;
+}
+
+header > section a, footer a {
+	color: #FFFFFF;
+}
+/*Header about, blog,...color*/
+nav a#abt {
+background: #69C4CC;
+margin-top: 2em;
+}
+nav a#cnt {
+background: #B7B700;
+}
+nav a#blg {
+background:#800080; 
+}
+nav a#prs {
+background: #E800E0;
+}
+
+nav#main {
+	padding: 0;
+}
+
+nav#main a {
+	padding: 0 4em;
+	font-weight: bold;
+	color: #530053;
+	font-size: 15px;
+}
+/*form*/
+nav#main ul li form {
+	position: relative;
+}
+nav#main ul li form input {
+	border-radius: 10px;
+}
+
+nav ul a, section #social a,
+h1, h2, h3, h4,h5, h6{
+	font-family: 'Lora', serif;
+}
+
+h2{
+	color: #4B9700;
+	font-weight: bold;
+}
+
+h3, p {
+   color: #69C4CC; 
+}
+
+h3 {
+font-size: 25px;
+margin-right: 1em;
+}
+
+
+/*footer for links*/
+footer a {
+padding: 10px 15px;
+}
+
+/*logo*/
+header img {
+float: left;
+height: 7em;
+width: 15em;	
+}
+
+
+/*boys page*/
+ .right_div {
+	width: 75%;
+	float: left;
+}
+.left_div {
+	width: 25%;
+	float: left;
+	background-color: #D1DD80;
+	border-radius: 1em;
+	color: #4B9700;
+	font-size: 13px;
+	font-weight: lighter;
+	line-height: 1.8em;
+}
+
+.left_div label {
+	background: #4B9700;
+	padding-right: 1.5em;
+	padding-left: 1em;
+	margin: 1em;
+	color: #FFFFFF;
+	border-radius: .5em;
+	list-style-type: none;
+}
+.left_div input.search, .left_div input {
+width: 8em;
+}
+.pagination {
+	margin-left: 4em;
+	color: #4B9700;
+} 
+.pagination a.pages, a.allpages {
+	color: #4B9700;
+	text-decoration: none;
+}
+a.allpages {
+	font-size: 20px;
+	font-weight: bold;
+}
+a.pages {
+	float: right;
+	margin-right: 5em;
+}
+.pagination form {
+	margin-top: 2em;
+}
+
+#gallery li {
+	list-style: none;
+	width: 150px;
+    height: 150px;
+	float: left;
+	margin: 2.5%;
+	background: #D1DD80;
+}
+
+#gallery li a p {
+color: #D7FFD7;
+margin: 0;
+padding: 5%;
+font-size: .75em;
+}
+
+
+/*JS*/
+
+.login-modal {
+display: none;
+}
+
+.lightbox {
+background: #000;
+opacity: .5;
+position: fixed;
+top: 0;
+height: 100%;
+width: 100%;
+}
+
+.login-form {
+border: 2px solid red;
+width: 250px;
+text-align: center;
+background: #69C4CC;
+margin: 150px 0 0 -150px;
+position: absolute;
+top: 0;
+left: 50%;
+}
+
+
