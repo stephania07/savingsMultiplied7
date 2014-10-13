@@ -1,6 +1,11 @@
 /* Colors:
 /* Dark Teal: #69C4CC */
 /* Light Teal: #CFEFEE */
+/* Light Pink: #F3CECD*/
+/* White: #FFFFFF*/
+/* Green: #B7B700*/
+/* Purple: #800080*/
+/* Pink: #E800E0*/
 h1, h2, h3, h4,h5, h6 {margin: 0}
 body { background-color: #69C4CC; }
 header { background-color: #CFEFEE; }
@@ -8,13 +13,16 @@ nav#main { background-color: #F3CECD; }
 section { background-color: #FFFFFF;}
 
 /*Basic Global Styles*/
+
 nav ul {
 	list-style-type: none;
 	color: #FFFFFF;
+	padding-right: 2em;
 }
 nav ul li {
 	display: inline-block;
 }
+
 
 /*Grid Layout*/
 header {
@@ -46,6 +54,7 @@ nav#main {
 	padding: 0.5em;
 }
 
+
 nav#main ul {
   margin: 0;
 }
@@ -55,6 +64,7 @@ body > section {
 }
 section {
 	clear: both;
+	border-radius: 0 0 3em 3em;
 }
 
 section:after {
@@ -134,19 +144,28 @@ header > section a {
 header > section a, footer a {
 	color: #FFFFFF;
 }
+
+header > section {
+border-radius: 3em 3em 0 0;
+}
+
 /*Header about, blog,...color*/
 nav a#abt {
 background: #69C4CC;
 margin-top: 2em;
+margin-right: 0;
 }
 nav a#cnt {
 background: #B7B700;
+margin-right:0;
 }
 nav a#blg {
 background:#800080; 
+margin-right: 0;
 }
 nav a#prs {
 background: #E800E0;
+margin-right: 0;
 }
 
 nav#main {
@@ -263,6 +282,8 @@ margin: 0;
 padding: 5%;
 font-size: .75em;
 }
+
+
 
 
 /*JS*/
