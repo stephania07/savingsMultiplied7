@@ -2,27 +2,51 @@ document.addEventListener('DOMContentLoaded', function() {
 var loginModal = document.querySelector(".login-modal");
 var lightbox = document.querySelector(".lightbox");
 var loginLink = document.querySelector(".login");
-var cancelButton = document.querySelector('input[value="cancel"]');
+var cancelButton = document.querySelector('input[value="cancel"]'); 
 
-lightbox.addEventListener("click", function(){
-  hide(loginModal);
+var loginModalToggleAreas = document.querySelectorAll(
+  '.lightbox, .login, input[value="cancel"]'
+  );
+
+for (var i = 0; i < loginModalToggleAreas.length; i++) {
+  loginModalToggleAreas[i].addEventListener('click', function() {
+    toggle(loginModal);
+      });
+    }
+});
+/*lightbox.addEventListener("click", function(){
+  toggle(loginModal);
 });
 
 
 cancelButton.addEventListener("click", function(){
-  hide(loginModal);
+  toggle(loginModal);
 });
-
 
 loginLink.addEventListener("click", function() {
-  show(loginModal);
+  toggle(loginModal);
   });
 });
+*/
+function toggle(element) {
+  if (element.classList)
+  	 element.classList.toggle("hidden");
+
+}
 
 function hide(element) {
-element.style.display="none";
+if (element.classList)
+	element.classList.add('hidden');
+else
+element.className += " " + "hidden";
 }
 
 function show(element) {
-element.style.display="block";
+if(element.classList)
+	element.classList.remove("hidden");
+else
+	element.className = element.className
+.replace(new RegExp('(^/\\b))' + 'hidden'.split(' '))
+.join('|' + '(\\b|$)', 'gi'), ' ');
 }
+
