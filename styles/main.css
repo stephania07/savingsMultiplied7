@@ -173,10 +173,10 @@ nav#main {
 }
 
 nav#main a {
-	padding: 0 4em;
+	padding: 0 2em;
 	font-weight: bold;
 	color: #530053;
-	font-size: 15px;
+	font-size: 14px;
 }
 /*form*/
 nav#main ul li form {
@@ -219,10 +219,10 @@ width: 15em;
 }
 
 
-/*boys page*/
+/*shopping page*/
  .right_div {
 	width: 75%;
-	float: left;
+  float: left;
 }
 .left_div {
 	width: 25%;
@@ -230,7 +230,7 @@ width: 15em;
 	background-color: #D1DD80;
 	border-radius: 1em;
 	color: #4B9700;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: lighter;
 	line-height: 1.8em;
 }
@@ -262,28 +262,32 @@ a.allpages {
 a.pages {
 	float: right;
 	margin-right: 5em;
+	margin-top: -2em;
 }
 .pagination form {
 	margin-top: 2em;
 }
 
+/*Images*/
 #gallery li {
-	list-style: none;
-	width: 150px;
-    height: 150px;
-	float: left;
-	margin: 2.5%;
-	background: #D1DD80;
+display: inline-block;
+list-style: none;
+margin-top: 2em;
+margin-right: .5em;
 }
 
-#gallery li a p {
-color: #D7FFD7;
+#gallery li img {
+width: 150px;
+height: 120px;
+margin: 2.5%;
+max-width: 100%;
+}
+
+#gallery li p {
 margin: 0;
-padding: 5%;
-font-size: .75em;
+text-align:center;
+width: 150px;
 }
-
-
 
 
 /*JS*/

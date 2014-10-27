@@ -50,3 +50,48 @@ else
 .join('|' + '(\\b|$)', 'gi'), ' ');
 }
 
+/* Shopping page*/
+function getJSON(url, cb) {
+var xhr = new XMLHttpRequest();
+xhr.open('GET', url);
+xhr.onload = function() {
+cb(JSON.parse(xhr.responseText));
+};
+xhr.send();
+}
+
+function addItemToList($listItems, items) {
+  var $li = document.createElement("li");
+  var $image = document.createElement("img");
+  var $price = document.createElement("p"); //do the same with the rest;
+  var $remaining = document.createElement("p");
+  var $seller = document.createElement("p");
+  var $title = document.createElement("p");
+
+  $image.src = items.image;
+  $price.innerHTML = items.price;
+  $remaining.innerHTML = items.remaining;
+  $seller.innerHTML = items.seller;
+  $title.innerHTML = items.title;
+
+  $li.appendChild($image);
+  $li.appendChild($price);//the same with the rest
+  $li.appendChild($remaining);
+  $li.appendChild($seller);
+  $li.appendChild($title);
+
+
+  $listItems.appendChild($li);//just to get all the children of the li ....
+}
+ getJSON('https://savingsmultipliedssh.firebaseio.com/itemlist.json', function(data) {
+ 	
+   var $ul = document.getElementById("gallery");
+    var items = data;
+   //$ul.innerHTML = "";
+     for (var i = 0; i < items.length; i++) {
+       addItemToList($ul, items[i]);
+}
+});
+
+
+
